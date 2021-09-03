@@ -15,6 +15,8 @@ services:
       - chartbrew-db:/var/lib/mysql
 
   chartbrew:
+    labels:
+      shipyard.route: '/'
     build: .
     restart: always
     ports:
